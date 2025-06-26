@@ -1,3 +1,5 @@
+// src/app/utils/utils.js
+
 const iptvJsonLinks = [
   "https://iptv-org.github.io/api/channels.json",
   "https://iptv-org.github.io/api/feeds.json",
@@ -12,7 +14,7 @@ const iptvJsonLinks = [
   "https://iptv-org.github.io/api/blocklist.json",
 ];
 
-export const buildIptv = () => {
+ const buildIptv = () => {
   // new container | data type
   const listOfChannels = [];
   // collect and assign util done
@@ -31,4 +33,7 @@ export const buildIptv = () => {
 };
 
 console.log(buildIptv());
+
+
+export default buildIptv;
 
