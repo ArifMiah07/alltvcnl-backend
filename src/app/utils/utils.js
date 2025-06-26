@@ -14,14 +14,14 @@ const iptvJsonLinks = [
   "https://iptv-org.github.io/api/blocklist.json",
 ];
 
- const buildIptv = () => {
+const buildIptv = () => {
   // new container | data type
   const listOfChannels = [];
   // collect and assign util done
   iptvJsonLinks.map((link, index) => {
     const result = link.match(/\/([a-z]+)\.json$/i);
     listOfChannels.push({
-      id: (index + 1),
+      id: index + 1,
       route: result[0],
       name: result[1],
       url: link,
@@ -32,8 +32,6 @@ const iptvJsonLinks = [
   return listOfChannels;
 };
 
-console.log(buildIptv());
-
+// console.log(buildIptv());
 
 export default buildIptv;
-
