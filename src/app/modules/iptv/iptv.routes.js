@@ -7,9 +7,10 @@ import { iptvControllers } from "./iptv.controller.js";
 const router = Router();
 router.get('/channels', iptvControllers.iptvChannelsController);
 router.get('/streams', iptvControllers.iptvStreamsController);
+router.post('/streams', iptvControllers.createiptvStreamsController);
 
 
 
 
 
-export const routes = router;
+export const iptvRoutes = router;

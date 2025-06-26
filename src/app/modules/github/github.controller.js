@@ -25,12 +25,12 @@ const githubApiController = async (req, res) => {
       total: result.data.length,
     });
 
-    console.log(`total data: ${result.length}`);
+    console.log(`total data: ${result.data.length}`);
   } catch (error) {
     console.log(error);
-    res.status(200).json({
+    res.status(500).json({
       status: false,
-      message: error.message | "something went wrong!",
+      message: error.message || "something went wrong!",
       error: error,
     });
   }
